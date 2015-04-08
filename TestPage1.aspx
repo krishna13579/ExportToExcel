@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    <h1>Hai</h1>
+    i)	$ git checkout –exact_file_name 
     </div>
     </form>
 </body>
