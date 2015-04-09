@@ -286,7 +286,7 @@ function FilterChats() {
         },
         error: function (msg, results) {
 
-            clearMessage();
+           // clearMessage();
         }
     });
 
