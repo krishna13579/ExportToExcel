@@ -1,0 +1,103 @@
+﻿
+<div class="feature">
+    <div id="gridFeatures" class="col-xs-12">
+        <div class="col-xs-1 pull-right"></div>
+        <div id="divSorting" class="grid-sort-display pull-right" style="margin-bottom: 15px;">         
+           <select name="ddlResultsForSort" class="form-control" id="ddlResultsForSort">
+                    <option value="ImpDate">Date</option>
+                    <option value="Title">Name</option>
+                    <option value="station">Station</option>                   
+            </select>
+        </div>
+    </div>
+    <div id="divScrolling">
+
+        <div  id="tbTemplate">
+
+        
+            </div>
+   
+    </div>
+    <table class="col-xs-11 gridFooter">
+        <tr>
+            <td align="left">
+                <select name="ddlResultsPerPage" id="ddlResultsPerPage">
+                    <option value="25">25 Results</option>
+                    <option selected="selected" value="50">50 Results</option>
+                    <option value="100">00 Results</option>
+                    <option value="150">150 Results</option>
+                </select>
+            </td>
+            <td align="right">
+                <ul class="pager pull-right">
+                    <li><a id="btnFirstPage" href="#" onclick="return false;"><<</a></li>
+                    <li><a id="btnPrevPage" href="#" onclick="return false;"><</a></li>
+                    <span id="lbCurrentPage">1/145</span>
+                    <li><a id="btnNextPage" href="#" onclick="return false;">></a></li>
+                    <li><a id="btnLastPage" href="#" onclick="return false;">>></a></li>
+                </ul>
+            </td>
+        </tr>
+    </table>  
+</div>
+<div id="divpopup" style="display:none"> 
+    <div id="popupHeader" class="col-xs-12">
+         <img src="images/close.png" onclick="closepopup();" />       
+    </div> 
+    <div id="popupContainer" class="col-xs-12">
+   
+   </div>
+</div>
+ <div id="popupcover"></div>
+<div id="dialog-confirm" title="Delete Images(s)?" style="display:none;" >
+  <p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span>Selected images will be deleted?</p>
+</div>
+<script id="ImagesListRow" type="text/x-jsrender">
+
+        <div class="divImageTemplate" onmouseover="ShowImgProp(this);" onmouseout="HideImgProp(this);">
+                <div class="divImage" >
+
+                      <img id="Img_{{>ImageId}}" class="image" src="{{>OriginalName}}">
+                     <div id="{{>ImageId}}" class="ImgProp" style="display:none;">                      
+                         <img src="images/view.png" class="btnImg" onclick="viewImg(this);" />
+                         <img src="images/edit.png" class="btnImg" onclick="editImg(this);" />
+                         <img src="images/delete.png" class="btnImg" onclick="delImg(this);" />                   
+                     </div>                    
+                </div>
+                <div class="divTitle">
+                      <span> {{>Title}} </span>
+                     </div>
+            </div>   
+</script>
+
+<script id="ViewImageRender" type="text/x-jsrender">    
+     <div class="col-xs-7 divImg">
+    
+        <img src="{{>OriginalName}}" />
+  
+    </div>
+    <div class="col-xs-5 divImgDetails ">
+        <div class="col-xs-12 imgTitle detailsRow"><span>{{>Title}}</span></div>       
+        <div class="col-xs-12 detailsRow"><span>Description : </span><label>{{>Description}}</label></div>        
+        <div class="col-xs-12 detailsRow">
+            <div class="col-xs-6 detailsRow"><span>Station : </span><label>{{>station}}</label></div>
+            <div class="col-xs-6 detailsRow"><span>Imp Date : </span><label>{{>ImpDate}}</label></div>
+        </div>
+        <div class="col-xs-12 detailsRow">
+             <div class="col-xs-6 detailsRow"><span>Rotation : </span><label>{{>rotation}}</label></div>
+             <div class="col-xs-6 detailsRow"><span>Classes : </span><label>{{>class}}</label></div>
+        </div>
+         <div class="col-xs-12 detailsRow">
+             <div class="col-xs-12 detailsRow"><span>Regions :</span></div>
+             <div class="col-xs-12 detailsRow">
+                  <label id="regionsList"></label>
+             </div>
+         </div>
+        <div class="col-xs-12 detailsRow">
+             <div class="col-xs-12 detailsRow"><span>Categories :</span></div>
+             <div class="col-xs-12 detailsRow">
+                  <label id="categoriesList"></label>
+             </div>
+         </div>
+    </div>
+</script>
