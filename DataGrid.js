@@ -201,7 +201,7 @@ function movePage(e) {
             }
         }
         else {
-            FilterChats();
+           // FilterChats();
         }
     }
     else {
