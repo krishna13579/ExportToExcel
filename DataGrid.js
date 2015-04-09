@@ -10,6 +10,7 @@ filtersEnabled = false;
 var checkAllSelector = "";
 var dgCheckBoxSelector = "";
 
+var dgcookie = "";
 
 $(document).ready(function () {
 
