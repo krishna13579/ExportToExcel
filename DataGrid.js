@@ -236,7 +236,7 @@ function displayLoadingMessage() {
 }
 
 function clearMessage() {
-    $('#imgloader').hide();
+    $('#imgloader').hide(); // Added 
 }
 
 
