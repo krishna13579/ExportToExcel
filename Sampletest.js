@@ -1,4 +1,7 @@
-var a="5";
+var a = "5";
+$(document).ready(function () {
+    show();
+});
 function show()
 {
 alert("sample");
