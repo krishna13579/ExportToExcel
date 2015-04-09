@@ -5,6 +5,6 @@ $(document).ready(function () {
 function show()
 {
     var b = "5";
-    //murugan
-
+}
+function del() {
 }
