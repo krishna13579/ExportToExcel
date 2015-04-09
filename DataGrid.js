@@ -11,7 +11,7 @@ var checkAllSelector = "";
 var dgCheckBoxSelector = "";
 var dgclaim = "";
 var dgcookie = "";
-
+var dgflag = false;
 $(document).ready(function () {
 
     $('#ddlResultsPerPage').unbind('change', pageResultChange);
