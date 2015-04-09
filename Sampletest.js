@@ -6,3 +6,5 @@ function show()
 {
 alert("sample");
 }
+function del() {
+}
