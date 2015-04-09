@@ -4,6 +4,7 @@ $(document).ready(function () {
 });
 function show()
 {
+    var b = "5";
 alert("sample");
 }
 function del() {
