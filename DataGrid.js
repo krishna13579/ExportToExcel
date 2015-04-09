@@ -9,7 +9,7 @@ searchMode = false;
 filtersEnabled = false;
 var checkAllSelector = "";
 var dgCheckBoxSelector = "";
-
+var dgclaim = "";
 
 $(document).ready(function () {
 

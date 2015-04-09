@@ -1,5 +1,7 @@
 ﻿#header {
 }
-.Footer {
+.body
+{
     float:left;
+    padding:0;
 }
